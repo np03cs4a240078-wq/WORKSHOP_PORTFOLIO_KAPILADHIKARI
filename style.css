@@ -1,0 +1,134 @@
+/* BASIC RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+.site-header {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav-list {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.nav-list li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-list a:hover {
+  color: #00bcd4;
+}
+
+/* HERO SECTION */
+.sec {
+  padding: 80px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.sec h1 span {
+  color: #00bcd4;
+}
+
+.lead {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.btn.ghost {
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+}
+
+/* ABOUT SECTION */
+.section {
+  padding: 60px 20px;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.about-left {
+  flex: 1;
+}
+
+.about-right img {
+  width: 280px;
+  border-radius: 10px;
+}
+
+/* CONTACT SECTION */
+#contact {
+  background: #eee;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#contact form {
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+}
+
+#contact input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #00bcd4;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #0095a5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-right img {
+    width: 70%;
+  }
+}
