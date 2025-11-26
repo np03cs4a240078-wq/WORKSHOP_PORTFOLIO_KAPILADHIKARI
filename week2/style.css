@@ -1,0 +1,91 @@
+#hero-video {
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+.card {
+  background: #064d7c;
+  color: white;
+  padding: 50px;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-10px); }
+
+
+#contact {
+  background: #eee;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#contact form {
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+}
+
+#contact input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #064d7c;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+.site-footer{
+  background: #064d7c;
+  color: white;
+  text-align: center;
+}
+.site-header {
+  
+  display:flex;
+  justify-content: space-between;
+  background: #064d7c;
+  color: white;
+  padding: 1.5rem 5%;
+  
+  align-items: center;
+  position: sticky;
+  top:0;
+  left:0;
+  z-index:;
+}
+.nav-list ul {
+ display: flex;
+ gap:2vw;
+  list-style: none;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in;
+}
+.nav a:hover{
+  opacity: 1;
+
+}
