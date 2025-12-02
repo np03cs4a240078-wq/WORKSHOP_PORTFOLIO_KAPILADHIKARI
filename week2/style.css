@@ -207,9 +207,7 @@ button {
   color: black;
 }
 
-/* ================================
-   TABLETS & SMALL LAPTOPS ≤1024px
-   ================================ */
+
 @media (max-width: 1024px) {
 
   .nav-list {
@@ -232,9 +230,7 @@ button {
   }
 }
 
-/* ========================
-   LARGE PHONES ≤768px
-   ======================== */
+
 @media (max-width: 768px) {
 
   /* HEADER */
@@ -277,9 +273,7 @@ button {
   }
 }
 
-/* ========================
-   SMALL PHONES ≤480px
-   ======================== */
+
 @media (max-width: 480px) {
 
   /* BODY TEXT */
@@ -320,9 +314,7 @@ button {
   }
 }
 
-/* =========================================================
-   HAMBURGER MENU (ONLY NECESSARY ADDITIONS — NOTHING CHANGED)
-   ========================================================= */
+
 
 #hamburger {
   font-size: 28px;
