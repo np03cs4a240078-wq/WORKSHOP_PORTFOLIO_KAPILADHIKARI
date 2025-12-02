@@ -132,3 +132,18 @@ button:hover {
     width: 70%;
   }
 }
+
+@media screen and (max-width: 545px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+        padding-top: 20px;
+    }
+    .overlay-font {
+        font-size: 1.8rem; 
+    }
+    #drawing-canvas {
+        width: 50%; 
+        height: 50%;
+        margin: 0 auto;
+    }
+

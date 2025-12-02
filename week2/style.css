@@ -1,18 +1,102 @@
-#hero-video {
-  position: absolute;
-  top:0;
-  left: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* VIDEO BACKGROUND */
+#hero-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* HEADER */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #064d7c;
+  color: white;
+  padding: 1.5rem 5%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.site-header h1 {
+  margin: 0;
+}
+
+/* NAVIGATION */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2vw;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.nav-list a:hover {
+  opacity: 1;
+}
+
+/* HERO / SECTION CONTENT */
+.section,
+.sec {
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+}
+
+.sec h1 span {
+  color: black;
+}
+
+.lead {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+/* ABOUT */
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+/* GRID CARDS */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 40px;
 }
+
 .card {
   background: #064d7c;
   color: white;
@@ -24,13 +108,18 @@
   transition: transform 0.3s;
 }
 
-.card:hover { transform: translateY(-10px); }
+.card:hover {
+  transform: translateY(-10px);
+}
 
-
+/* CONTACT SECTION */
 #contact {
-  background: #eee;
+  background: rgba(255,255,255,0.95);
   padding: 50px 20px;
   text-align: center;
+  color: black;
+  position: relative;
+  z-index: 10;
 }
 
 #contact form {
@@ -45,6 +134,7 @@
   margin: 10px 0 20px;
 }
 
+/* BUTTON */
 button {
   padding: 10px 20px;
   background: #064d7c;
@@ -53,39 +143,222 @@ button {
   color: white;
   border-radius: 5px;
 }
-.site-footer{
+
+/* FOOTER */
+.site-footer {
   background: #064d7c;
   color: white;
   text-align: center;
+  padding: 20px;
 }
-.site-header {
-  
-  display:flex;
-  justify-content: space-between;
+
+/* ABOUT SECTION */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  color: white;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #00bcd4;
+}
+
+.about-paragraph {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.grid-container1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card1 {
   background: #064d7c;
   color: white;
-  padding: 1.5rem 5%;
-  
-  align-items: center;
-  position: sticky;
-  top:0;
-  left:0;
-  z-index:;
-}
-.nav-list ul {
- display: flex;
- gap:2vw;
-  list-style: none;
+  padding: 50px;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
 }
 
-.nav a {
+.card1:hover {
+  transform: translateY(-10px);
+}
+
+.section-title {
+  color: black;
+}
+
+/* ================================
+   TABLETS & SMALL LAPTOPS ≤1024px
+   ================================ */
+@media (max-width: 1024px) {
+
+  .nav-list {
+    gap: 20px;
+  }
+
+  .grid-container,
+  .grid-container1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card,
+  .card1 {
+    padding: 40px;
+    font-size: 1.2rem;
+  }
+
+  .section {
+    padding: 70px 15px;
+  }
+}
+
+/* ========================
+   LARGE PHONES ≤768px
+   ======================== */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .site-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* GRID → 1 Column */
+  .grid-container,
+  .grid-container1 {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .card1 {
+    padding: 35px;
+    font-size: 1.15rem;
+  }
+
+  /* TEXT */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-paragraph {
+    font-size: 1.05rem;
+  }
+
+  /* Contact */
+  #contact form {
+    width: 90%;
+  }
+}
+
+/* ========================
+   SMALL PHONES ≤480px
+   ======================== */
+@media (max-width: 480px) {
+
+  /* BODY TEXT */
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  /* GRID CARDS */
+  .card,
+  .card1 {
+    padding: 25px;
+    font-size: 1rem;
+  }
+
+  /* HEADER */
+  .site-header h1 {
+    font-size: 1.3rem;
+  }
+
+  /* NAVIGATION */
+  .nav-list a {
+    font-size: 0.9rem;
+  }
+
+  /* CONTACT */
+  #contact input {
+    padding: 8px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+/* =========================================================
+   HAMBURGER MENU (ONLY NECESSARY ADDITIONS — NOTHING CHANGED)
+   ========================================================= */
+
+#hamburger {
+  font-size: 28px;
   color: white;
-  text-decoration: none;
-  font-weight: 500;
-  opacity: 0.6;
-  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+  display: none;
 }
-.nav a:hover{
-  opacity: 1;
 
+@media (max-width: 768px) {
+
+  #hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    background: #064d7c;
+    padding: 20px 0;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+  }
+
+  nav.show {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-list a {
+    font-size: 1.3rem;
+  }
 }
